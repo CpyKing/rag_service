@@ -50,7 +50,6 @@ class ChatCompletionHandler:
             ]
         
             res = chat.invoke(messages)
-            import pdb;pdb.set_trace()
             return res.content.lower() == 'true'
         except Exception as e:
             print(f"\n判断意图时发生错误: {str(e)}")
