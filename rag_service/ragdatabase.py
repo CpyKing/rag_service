@@ -19,7 +19,7 @@ class RAGDatabase():
         doc_set = set()
         for p in data_paths:
             loader = CSVLoader(
-                file_path="/home/zzz/rag_service/data/Fashion_Shop_Consultant/train.csv",
+                file_path=p,
             )
             for doc in loader.load():
                 doc.page_content = doc.page_content.replace('"', '')
